@@ -6,20 +6,25 @@ body{
                        'section section aside aside'
                        'footer footer footer footer';
   grid-template-rows: 15vh 60vh 30vh;
+  grid-template-columns: 24.7vw 24.7vw 24.7vw 24.7vw;
 }
 
 /* ESTILO DA NAV COM BREAKPOINT EM 768 E 425 */
 nav{
   grid-area: navbar;
-  background-color: darkolivegreen;
+  background-color: #ee5488;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 nav a{
-  color: white;
+  color: limegreen;
   text-decoration: none;
   font-size: 16pt;
+}
+nav a:hover{
+  text-decoration: underline;
+  color: rgb(224, 224, 224);
 }
 /* ESTRUTURA MENU HAMBURGUER */
 #menuHamburguer{
@@ -50,7 +55,7 @@ nav a{
     grid-template-areas: 'navbar navbar navbar aside'
                          'section section section aside'
                          'footer footer footer aside';
-    grid-template-rows: 15vh 60vh 30vh;    
+    grid-template-rows: 15vh 80vh 30vh;    
   } 
 }
 /* CELULAR */
@@ -72,13 +77,43 @@ nav a{
 
 section{
   grid-area: section;
-  background-color: orange;
+  background-color: #51c094;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section img{
+  border-radius: 100%;
+  z-index: 2;
+}
+section h1{
+  color: white;
+  font-family: 'Dokdo', cursive;
+  font-size: 26pt;
 }
 aside{
   grid-area: aside;
-  background-color: blue;
+  background-color: #f2c356;
+  
 }
 footer{
   grid-area: footer;
-  background-color: brown;
+  background-color: lime;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+#redeSocial{
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+#interacoesNico{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+
 }
