@@ -1,11 +1,16 @@
+aside{
+  grid-area: aside;
+  background-color: #f2c356; 
+}
+
 /* NA TAG BODY ESTAMOS CRIANDO O GRID TEMPLATE  */
 body{
   margin: 0;
   display: grid;
   grid-template-areas: 'navbar navbar navbar navbar'
-                       'section section aside aside'
-                       'footer footer footer footer';
-  grid-template-rows: 15vh 60vh 30vh;
+  'section section aside aside'
+  'footer footer footer footer';
+  grid-template-rows: 15vh 70vh 30vh;
   grid-template-columns: 24.7vw 24.7vw 24.7vw 24.7vw;
 }
 
@@ -17,15 +22,18 @@ nav{
   justify-content: space-around;
   align-items: center;
 }
+
 nav a{
   color: limegreen;
   text-decoration: none;
   font-size: 16pt;
 }
+
 nav a:hover{
   text-decoration: underline;
   color: rgb(224, 224, 224);
 }
+
 /* ESTRUTURA MENU HAMBURGUER */
 #menuHamburguer{
   display: none;
@@ -43,35 +51,44 @@ nav a:hover{
 }
 
 /* TABLET */
-
 @media (max-width:768px){
   nav a{
     display: none;
   }
+  
   #menuHamburguer{
     display: flex;
   }
+  
   body{
     grid-template-areas: 'navbar navbar navbar aside'
-                         'section section section aside'
-                         'footer footer footer aside';
+    'section section section aside'
+    'footer footer footer aside';
     grid-template-rows: 15vh 80vh 30vh;    
   } 
+  
+  #interacoesNico{
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
 /* CELULAR */
 @media (max-width:425px){
   nav{
     justify-content: flex-start;
   }
+  
   #menuHamburguer{
     margin-left: 10px;
   }
+  
   body{
     grid-template-areas: 'navbar navbar navbar navbar'
-                         'section section section section'
-                         'aside aside aside aside'
-                         'footer footer footer footer';
-    grid-template-rows: 15vh 60vh 60vh 30vh;
+    'section section section section'
+    'aside aside aside aside'
+    'footer footer footer footer';
+    grid-template-rows: 15vh 60vh 80vh 30vh;
   }
 }
 
@@ -83,20 +100,18 @@ section{
   align-items: center;
   flex-direction: column;
 }
+
 section img{
   border-radius: 100%;
   z-index: 2;
 }
+
 section h1{
   color: white;
   font-family: 'Dokdo', cursive;
   font-size: 26pt;
 }
-aside{
-  grid-area: aside;
-  background-color: #f2c356;
-  
-}
+
 footer{
   grid-area: footer;
   background-color: lime;
@@ -105,15 +120,22 @@ footer{
   align-items: center;
   flex-direction: column;
 }
+
 #redeSocial{
   width: 200px;
   display: flex;
   justify-content: space-around;
 }
+
 #interacoesNico{
   width: 100%;
   display: flex;
   justify-content: space-around;
-
-
 }
+
+#interacoesNico a{
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
