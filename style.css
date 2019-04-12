@@ -17,7 +17,7 @@ body{
 /* ESTILO DA NAV COM BREAKPOINT EM 768 E 425 */
 nav{
   grid-area: navbar;
-  background-color: #ee5488;
+  background-color: blue;
   display: flex;
   justify-content: space-around;
   align-items: center;
